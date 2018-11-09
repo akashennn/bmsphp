@@ -30,14 +30,23 @@ class Categories extends CI_Controller {
 
 	}
 
-	public function add()
+	public function create()
 	{	
 		$data['title'] = 'Add New Category';
-		$this->load->view('templates/header');
-		$this->load->view('categories/add', $data);
-		$this->load->view('templates/footer');
 
-		print_r($data);
+		$this->form_validation->set_rules('id','Id','required');
+		$this->form_validation->set_rules('id','Id','required');
 
+		if($this->form_validation->run() === FALSE){
+			
+			$this->load->model('Category_model');
+			$this->load->view('templates/header');
+			$this->load->view('categories/create', $data);
+			$this->load->view('templates/footer');
+		} else {
+			$this->category_model->create_category();
+			$this->load->model('Category_model');
+			redirect('categories');
+		}
 	}
 }

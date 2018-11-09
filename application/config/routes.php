@@ -53,7 +53,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['admin/(:any)'] = 'admins/view/$1';
 
 $route['default_controller'] = 'categories';
-$route['category/add'] = 'categories/add';
+$route['category/create'] = 'categories/create';
 $route['category/view/(:any)'] = 'categories/view/$1';
 
 $route['404_override'] = '';
