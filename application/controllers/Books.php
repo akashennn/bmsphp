@@ -21,13 +21,14 @@ class Books extends CI_Controller {
 	{	
 		$data['title'] = 'Details of book';
 		$data['cat'] = $this->book_model->get_book($id);
+		$data['pbooks'] = $this->book_model->get_popular_books();
 
 		$this->load->model('book_model');
 		$this->load->view('templates/header');
 		$this->load->view('books/view', $data);
 		$this->load->view('templates/footer');
 
-		print_r($data['cat']);
+		// print_r($data['pbooks']);
 
 	}
 

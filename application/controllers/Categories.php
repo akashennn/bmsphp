@@ -26,7 +26,7 @@ class Categories extends CI_Controller {
 		$this->load->view('categories/view', $data);
 		$this->load->view('templates/footer');
 
-		print_r($data['cat']);
+		// print_r($data['cat']);
 
 	}
 

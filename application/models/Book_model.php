@@ -28,4 +28,11 @@ class Book_model extends CI_Model {
         );
         return $this->db->insert('books',$data);
     }
+
+    public function get_popular_books()
+    {
+        $query = $this->db->get('books', 5);
+        $this->db->order_by('view_count', 'DESC');
+        return $query->result_array();
+    }
 }
