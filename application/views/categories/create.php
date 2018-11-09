@@ -6,7 +6,7 @@
         <div class="display-table-cell vertical-align-middle text-center">
           <!-- start page title -->
           <h1 class="text-white alt-font font-weight-600 letter-spacing-minus-1 margin-10px-bottom">Add New Category</h1>
-          <span class="text-white opacity6 alt-font">Let's meet for coffee and plan your event.</span>
+          <span class="text-white opacity6 alt-font">New categories are important to stay organized.</span>
           <!-- end page title -->
         </div>
       </div>

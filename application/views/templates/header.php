@@ -12,7 +12,7 @@
 <body>
     
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="<?php echo base_url("categories"); ?>">Navbar</a>
+  <a class="navbar-brand" href="<?php echo base_url("categories"); ?>"><strong>BMS</strong></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -42,6 +42,14 @@
         echo '<a class="btn btn-outline-success my-2 my-sm-0" href="/CW1/admin"> Login</a>';
         echo '</form>';
       } else {
+        echo '<li class="nav-item">';
+        echo '<a class="nav-link" href="/CW1/categories">Home</a>';
+        echo '</li>';
+
+        echo '<li class="nav-item">';
+        echo '<a class="nav-link" href="/CW1/books">Books</a>';
+        echo '</li>';
+
         echo '<li class="nav-item">';
         echo '<a class="nav-link" base href="/CW1/books/create">Add Books</a>';
         echo '</li>';

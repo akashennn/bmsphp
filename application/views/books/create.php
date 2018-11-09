@@ -6,7 +6,7 @@
         <div class="display-table-cell vertical-align-middle text-center">
           <!-- start page title -->
           <h1 class="text-white alt-font font-weight-600 letter-spacing-minus-1 margin-10px-bottom">Add New Book</h1>
-          <span class="text-white opacity6 alt-font">Let's meet for coffee and plan your event.</span>
+          <span class="text-white opacity6 alt-font">Reading makes a full man.</span>
           <!-- end page title -->
         </div>
       </div>
@@ -29,22 +29,20 @@
                 </select>
             </div>
                 <div class="col-md-12">
-                    <input type="details" name="details" id="namdetailse" placeholder="Details *" class="big-input">
+                    <input name="title" id="title" placeholder="Title *" class="big-input">
+                </div>
+                <div class="col-md-12">
+                    <input name="image_url" id="image_url" placeholder="Image Url *" class="big-input">
                 </div>
                 <div class="col-md-12">
                     <input type="price" name="price" id="price" placeholder="Price *" class="big-input">
                 </div>
-                <div class="col-md-12">
-                    <input type="title" name="title" id="title" placeholder="Title *" class="big-input">
-                </div>
+                
                 <div class="col-md-12">
                     <input type="author" name="author" id="author" placeholder="Author *" class="big-input">
                 </div>
                 <div class="col-md-12">
-                    <input type="view_count" name="view_count" id="view_count" placeholder="View Count *" class="big-input">
-                </div>
-                <div class="col-md-12">
-                    <textarea name="image_url" id="image_url" placeholder="Image Url *" rows="6" class="big-textarea"></textarea>
+                    <textarea name="details" id="details" placeholder="Details *" rows="6" class="big-textarea"></textarea>
                 </div>
                 <div class="col-md-12 text-center">
                     <button id="project-contact-us-button" type="submit" class="btn btn-transparent-dark-gray btn-large margin-20px-top">Submit</button>

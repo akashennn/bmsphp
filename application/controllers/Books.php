@@ -52,4 +52,16 @@ class Books extends CI_Controller {
 			redirect('categories');
 		}
 	}
+
+	public function search()
+	{
+		$data['keyword'] = $this->input->post('keyword');
+		$data['cat'] = $this->book_model->search_book();
+		$this->load->model('book_model');
+		$this->load->view('templates/header');
+		$this->load->view('books/result', $data);
+		$this->load->view('templates/footer');
+
+		// print_r($data['cat']);
+	}
 }

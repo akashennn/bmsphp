@@ -23,7 +23,6 @@ class Book_model extends CI_Model {
             'price' => $this->input->post('price'),
             'title' => $this->input->post('title'),
             'author' => $this->input->post('author'),
-            'view_count' => $this->input->post('view_count'),
             'image_url' => $this->input->post('image_url')
         );
         return $this->db->insert('books',$data);
@@ -33,6 +32,14 @@ class Book_model extends CI_Model {
     {
         $query = $this->db->get('books', 5);
         $this->db->order_by('view_count', 'DESC');
+        return $query->result_array();
+    }
+
+    public function search_book()
+    {
+        $keyword = $this->input->post('keyword');
+        $this->db->like('title',$keyword); $this->db->or_like('author',$keyword);
+        $query = $this->db->get('books');
         return $query->result_array();
     }
 }
