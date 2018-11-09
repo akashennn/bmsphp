@@ -11,6 +11,7 @@ class Dashboard extends CI_Controller
 	{
 		$this->load->view('templates/header');
 		$this->load->view('admin/dashboard');
+		$this->load->view('templates/footer');
 	}
 	function logout()
 	{
