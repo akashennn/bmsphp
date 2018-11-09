@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="<?php echo base_url("assets/css/bootstrap.min.css"); ?>" />
     <link rel="stylesheet" href="<?php echo base_url("assets/css/album.css"); ?>" />
     <link rel="stylesheet" href="<?php echo base_url("assets/css/style.css"); ?>" />
+    <link rel="stylesheet" href="<?php echo base_url("assets/css/simple-sidebar.css"); ?>" />
 </head>
 <body>
     
@@ -21,15 +22,11 @@
       <li class="nav-item active">
         <a class="nav-link" href="<?php echo base_url("categories"); ?>">Home <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url("categories/create"); ?>">Add Category</a>
-      </li>
+
       <li class="nav-item">
         <a class="nav-link" href="<?php echo base_url("books"); ?>">Books</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url("books/create"); ?>">Add Book</a>
-      </li>
+
       <!-- <li class="nav-item">
         <a class="nav-link" href="#">Link</a>
       </li>
@@ -44,13 +41,9 @@
           <a class="dropdown-item" href="#">Something else here</a>
         </div>
       </li> -->
-      <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url("admin/login"); ?>">Admin</a>
-      </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" style="margin:5px" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+			<a class="btn btn-outline-success my-2 my-sm-0" href="<?php echo base_url("admin"); ?>">Login</a>
     </form>
   </div>
 </nav>
