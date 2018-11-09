@@ -44,8 +44,8 @@ class Categories extends CI_Controller {
 			$this->load->view('categories/create', $data);
 			$this->load->view('templates/footer');
 		} else {
-			$this->category_model->create_category();
 			$this->load->model('Category_model');
+			$this->category_model->create_category();
 			redirect('categories');
 		}
 	}

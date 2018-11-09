@@ -56,5 +56,9 @@ $route['default_controller'] = 'categories';
 $route['category/create'] = 'categories/create';
 $route['category/view/(:any)'] = 'categories/view/$1';
 
+$route['book'] = 'books/index';
+$route['book/create'] = 'books/create';
+$route['book/view/(:any)'] = 'books/view/$1';
+
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

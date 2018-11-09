@@ -21,6 +21,15 @@
       <li class="nav-item active">
         <a class="nav-link" href="<?php echo base_url("categories"); ?>">Home <span class="sr-only">(current)</span></a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<?php echo base_url("categories/create"); ?>">Add Category</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<?php echo base_url("books"); ?>">Books</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<?php echo base_url("books/create"); ?>">Add Book</a>
+      </li>
       <!-- <li class="nav-item">
         <a class="nav-link" href="#">Link</a>
       </li>
