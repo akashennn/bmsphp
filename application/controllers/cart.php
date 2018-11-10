@@ -6,7 +6,14 @@ class Cart extends CI_Controller
 
     public function index()
     {
-        $data['items'] = array_values(unserialize($this->session->userdata('cart')));
+        if($this->session->has_userdata('cart'))
+        {
+            $data['items'] = array_values(unserialize($this->session->userdata('cart')));            
+        } else {
+            $this->session->set_flashdata('message', "Please add items to the cart first!");
+            redirect('books/index','refresh');
+        }
+
         $data['total'] = $this->total();
 
 		$this->load->view('templates/header');

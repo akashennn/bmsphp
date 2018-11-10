@@ -1,4 +1,11 @@
 <!-- <h1> <?= $title?> </h1> -->
+<?php if ($this->session->flashdata('message')) { ?>
+<div role="alert" class="alert alert-danger">
+   <button data-dismiss="alert" class="close" type="button">
+	   <span aria-hidden="true">x</span><span class="sr-only">Close</span></button>
+   <?= $this->session->flashdata('message') ?>
+</div>
+<?php } ?>
 
 <main role="main">
 
