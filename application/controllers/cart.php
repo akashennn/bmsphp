@@ -16,7 +16,7 @@ class Cart extends CI_Controller
 
     public function buy($id)
     {
-        $product = $this->productModel->find($id);
+        $product = $this->book_model->find($id);
         $item = array(
             'id' => $product->id,
             'title' => $product->title,

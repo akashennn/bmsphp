@@ -58,4 +58,14 @@ class Book_model extends CI_Model {
         $query = $this->db->get('books');
         return $query->result_array();
     }
+
+    function findAll()
+    {
+        return $this->db->get('books')->result();
+    }
+
+    function find($id)
+    {
+        return $this->db->where('id', $id)->get('books')->row();
+    }
 }

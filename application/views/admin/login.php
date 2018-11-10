@@ -15,6 +15,7 @@
       <label for="inputPassword" class="sr-only">Password</label>
       <input type="password" name="password" class="form-control" placeholder="Password" required>
       <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        <a href="<?php echo site_url('books'); ?>" class="btn btn-dark btn-lg btn-block">Continue Shopping</a>
 	  <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
 </form>
 </div>

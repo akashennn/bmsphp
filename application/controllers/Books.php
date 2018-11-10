@@ -34,7 +34,7 @@ class Books extends CI_Controller {
 		$data['title'] = 'Details of book';
 		$data['cat'] = $this->book_model->get_book($id);
 		$data['pbooks'] = $this->book_model->get_popular_books();
-        $data['products'] = $this->productModel->find($id);
+        $data['products'] = $this->book_model->find($id);
 
 		$this->load->model('book_model');
 		$this->load->view('templates/header');
