@@ -39,7 +39,8 @@
 
         echo '</ul>';
         echo '<form class="form-inline my-2 my-lg-0">';
-        echo '<a class="btn btn-outline-success my-2 my-sm-0" href="/CW1/admin"> Login</a>';
+        echo '<a class="btn btn-outline-dark my-2 my-sm-0" href="/CW1/cart">Cart</a>';
+        echo '<a class="btn btn-outline-success my-2 my-sm-0" href="/CW1/admin">Login</a>';
         echo '</form>';
       } else {
         echo '<li class="nav-item">';
@@ -60,7 +61,8 @@
 
         echo '</ul>';
         echo '<form class="form-inline my-2 my-lg-0">';
-        echo '<a class="btn btn-outline-danger my-2 my-sm-0" href="/CW1/admin/dashboard/logout"> Logout</a>';
+        echo '<a class="btn btn-outline-dark my-2 my-sm-0" href="/CW1/cart">Cart</a>';
+        echo '<a class="btn btn-outline-danger my-2 my-sm-0" href="/CW1/admin/dashboard/logout">Logout</a>';
         echo '</form>';
       }?>
 

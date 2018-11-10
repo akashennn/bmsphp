@@ -12,7 +12,7 @@
     <li class="list-group-item"><?php echo $cat['author']; ?></li>
     <li class="list-group-item"><?php echo $cat['stock_available']; ?> items left.</li>
     <li class="list-group-item"><?php echo $cat['view_count']; ?> purchases in last week.</li>
-    <a class="btn btn-outline-default my-2 my-sm-0" href="" style="background:black; color:white;"> Buy Now</a>
+    <a class="btn btn-outline-default my-2 my-sm-0" href="<?php echo site_url('cart/buy/'.$products->id); ?>" style="background:black; color:white;"> Buy Now</a>
   </ul>
   </div>
 <div>
