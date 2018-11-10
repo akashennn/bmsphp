@@ -5,6 +5,22 @@ class Book_model extends CI_Model {
         $query = $this->db->get('books');
         return $query->result_array();
     }
+
+    public function record_count() {
+        return $this->db->count_all("books");
+    }
+  
+    public function fetch_departments($limit, $start) {
+        $this->db->limit($limit, $start);
+        $query = $this->db->get("books");
+        if ($query->num_rows() > 0) {
+            foreach ($query->result_array() as $row) {
+                $data[] = $row;
+            }
+            return $data;
+        }
+        return false;
+    }
     
     public function get_book($id)
     {

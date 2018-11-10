@@ -6,9 +6,21 @@ class Books extends CI_Controller {
 	public function index()
 	{
 		$data['title'] = 'List of Books';
-		$data['cat'] = $this->book_model->get_books();
+		// $data['cat'] = $this->book_model->get_books();
 		
 		$this->load->model('book_model');
+		$this->load->library('pagination');
+
+		$config = array();
+		$config["base_url"] = base_url() . "books/index";
+		$config["total_rows"] = $this->book_model->record_count();
+		$config["per_page"] = 6;
+		$config["uri_segment"] = 3;
+		$this->pagination->initialize($config);
+		$page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
+		$data["cat"] = $this->book_model->fetch_departments($config["per_page"], $page);
+		$str_links = $this->pagination->create_links();
+		$data["links"] = explode('&nbsp;',$str_links );
 		$this->load->view('templates/header');
 		$this->load->view('books/index', $data);
 		$this->load->view('templates/footer');
