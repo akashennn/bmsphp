@@ -1,10 +1,8 @@
-<!-- <h1> <?= $title?> </h1> -->
-
 <main role="main">
 
 <section class="jumbotron text-center">
   <div class="container">
-    <h1 class="jumbotron-heading">List of Books</h1>
+    <h1 class="jumbotron-heading">List of Books for <?= $catid['name']?></h1>
     <p class="lead text-muted">
     "Discipline is the bridge between goals and accomplishment." 
     <br>

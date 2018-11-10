@@ -19,14 +19,15 @@ class Categories extends CI_Controller {
 	public function view($id)
 	{	
 		$data['title'] = 'List of Books';
-		$data['cat'] = $this->category_model->get_category($id);
+		$data['cat'] = $this->category_model->get_category_books($id);
+		$data['catid'] = $this->category_model->get_category_name($id);
 
 		$this->load->model('Category_model');
 		$this->load->view('templates/header');
 		$this->load->view('categories/view', $data);
 		$this->load->view('templates/footer');
 
-		// print_r($data['cat']);
+		// print_r($data['catid']);
 
 	}
 
