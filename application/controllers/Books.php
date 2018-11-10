@@ -41,7 +41,7 @@ class Books extends CI_Controller {
 		$this->load->view('books/view', $data);
 		$this->load->view('templates/footer');
 
-		print_r($data['products']);
+		// print_r($data['products']);
 
 	}
 
