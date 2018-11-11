@@ -87,4 +87,14 @@ class Book_model extends CI_Model {
         $this->db->where('id', $id);
         $this->db->update('books', $data);
     }
+
+    public function user_tracking($id, $session_id)
+    {
+        $data = array(
+            'book_id' => $id,
+            'session_id' => $session_id
+        );
+
+        return $this->db->insert('user_tracking', $data);
+    }
 }

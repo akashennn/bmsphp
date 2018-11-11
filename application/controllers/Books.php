@@ -44,7 +44,8 @@ class Books extends CI_Controller {
 		$this->load->view('templates/footer');
 		$this->book_model->update_views($id,$data['views']['view_count']);
 
-		// print_r($data['views']['view_count']);
+		$session_id = session_id();
+		$this->book_model->user_tracking($id, $session_id);
 
 	}
 
