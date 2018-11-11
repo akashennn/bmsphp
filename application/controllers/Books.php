@@ -18,7 +18,7 @@ class Books extends CI_Controller {
 		$config["uri_segment"] = 3;
 		$this->pagination->initialize($config);
 		$page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
-		$data["cat"] = $this->book_model->fetch_departments($config["per_page"], $page);
+		$data["cat"] = $this->book_model->fetch_books($config["per_page"], $page);
 		$str_links = $this->pagination->create_links();
 		$data["links"] = explode('&nbsp;',$str_links );
 		$this->load->view('templates/header');

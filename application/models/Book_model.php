@@ -10,7 +10,7 @@ class Book_model extends CI_Model {
         return $this->db->count_all("books");
     }
   
-    public function fetch_departments($limit, $start) {
+    public function fetch_books($limit, $start) {
         $this->db->limit($limit, $start);
         $query = $this->db->get("books");
         if ($query->num_rows() > 0) {

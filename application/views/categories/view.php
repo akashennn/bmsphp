@@ -35,3 +35,27 @@
 
 
 </main>
+
+<div class="text-center" style="margin-top:30px;">
+<nav>
+  <ul class="pagination">
+  <?php foreach ($links as $link) {
+echo "<li>". $link."</li>";
+} ?>
+  </ul>
+</nav>
+<div>
+
+<style>
+.pagination {
+   justify-content: center;
+}
+
+a.current {
+  background: black;
+}
+
+.text-white {
+  color: white;
+}
+</style>

@@ -27,4 +27,20 @@ class Category_model extends CI_Model {
         );
         return $this->db->insert('categories',$data);
     }
+
+    public function record_count($id) {
+        return $this->db->count_all('books', array('category_id' => $id));
+    }
+
+    public function fetch_books($limit, $start, $id) {
+        // $query = $this->db->get_where($table_name,$where_array, $limit, $offset);
+        $query = $this->db->get_where("books", array('category_id' => $id),$limit, $start);
+        if ($query->num_rows() > 0) {
+            foreach ($query->result_array() as $row) {
+                $data[] = $row;
+            }
+            return $data;
+        }
+        return $query->result_array();
+    }
 }
