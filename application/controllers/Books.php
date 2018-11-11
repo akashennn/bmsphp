@@ -34,14 +34,17 @@ class Books extends CI_Controller {
 		$data['title'] = 'Details of book';
 		$data['cat'] = $this->book_model->get_book($id);
 		$data['pbooks'] = $this->book_model->get_popular_books();
-        $data['products'] = $this->book_model->find($id);
+		$data['products'] = $this->book_model->find($id);
+		$data['views'] = $this->book_model->get_views($id);
+				
 
 		$this->load->model('book_model');
 		$this->load->view('templates/header');
 		$this->load->view('books/view', $data);
 		$this->load->view('templates/footer');
+		$this->book_model->update_views($id,$data['views']['view_count']);
 
-		// print_r($data['products']);
+		// print_r($data['views']['view_count']);
 
 	}
 

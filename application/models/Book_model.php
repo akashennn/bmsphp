@@ -68,4 +68,23 @@ class Book_model extends CI_Model {
     {
         return $this->db->where('id', $id)->get('books')->row();
     }
+
+    public function get_views($id)
+    {
+        $this->db->select('view_count');
+        $this->db->from('books');
+        $this->db->where('id', $id);
+        $query = $this->db->get();
+        return $query->row_array();
+    }
+
+    public function update_views($id, $view_count)
+    {
+        $data = array(
+            'view_count' => $view_count+1
+        );
+    
+        $this->db->where('id', $id);
+        $this->db->update('books', $data);
+    }
 }

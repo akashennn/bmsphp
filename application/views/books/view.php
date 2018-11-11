@@ -11,7 +11,7 @@
     <li class="list-group-item">LKR.<?php echo $cat['price']; ?></li>
     <li class="list-group-item"><?php echo $cat['author']; ?></li>
     <li class="list-group-item"><?php echo $cat['stock_available']; ?> items left.</li>
-    <li class="list-group-item"><?php echo $cat['view_count']; ?> purchases in last week.</li>
+    <li class="list-group-item"><?php echo $cat['view_count']; ?> views in last week.</li>
     <a class="btn btn-outline-default my-2 my-sm-0" href="<?php echo site_url('cart/buy/'.$products->id); ?>" style="background:black; color:white;"> Buy Now</a>
   </ul>
   </div>
@@ -22,6 +22,7 @@
 <div class="row" style="margin: 0 50px">
 <?php foreach ($pbooks as $cat) : ?>
 <div class="card" style="width: 10rem; margin: 10px 20px">
+  <a href="<?php echo site_url('book/view/'.$cat['id']);?>">
   <img class="card-img-top" style="height: 200px" src="<?php echo $cat['image_url']; ?>" alt="Card image cap">
   <div class="card-body">
     <p class="card-title text-center"><?php echo $cat['title']; ?></p>
