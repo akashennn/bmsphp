@@ -17,8 +17,9 @@
   </div>
 <div>
 
+<hr>
 <div class="container text-center">
-<h6> Customers who viewed this item also viewed </h6>
+<h6 style="text-transform:uppercase;"> Customers who viewed this item also viewed </h6>
 <div class="row" style="margin: 0 50px">
 <?php foreach ($pbooks as $cat) : ?>
 <div class="card" style="width: 10rem; margin: 10px 20px">
@@ -31,3 +32,4 @@
 <?php endforeach; ?>
 </div>
 </div>
+<hr>

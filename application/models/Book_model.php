@@ -44,13 +44,6 @@ class Book_model extends CI_Model {
         return $this->db->insert('books',$data);
     }
 
-    public function get_popular_books()
-    {
-        $this->db->order_by('view_count', 'DESC');
-        $query = $this->db->get('books', 5);
-        return $query->result_array();
-    }
-
     public function search_book()
     {
         $keyword = $this->input->post('keyword');
@@ -96,5 +89,26 @@ class Book_model extends CI_Model {
         );
 
         return $this->db->insert('user_tracking', $data);
+    }
+
+    public function get_pbooks($id)
+    {
+        $this->db->order_by('view_count', 'DESC');
+        $query = $this->db->get('books', 6);
+        $data = [];
+        foreach ($query->result_array() as $row) {
+            if($row['id'] === $id){
+                FALSE;
+            } else {
+                if(sizeof($data) == 5){
+                    FALSE;
+                }else{
+                    $data[] = $row;
+                }
+
+                // $data[] = $row;
+            }
+        }
+        return $data;
     }
 }

@@ -33,10 +33,9 @@ class Books extends CI_Controller {
 	{	
 		$data['title'] = 'Details of book';
 		$data['cat'] = $this->book_model->get_book($id);
-		$data['pbooks'] = $this->book_model->get_popular_books();
 		$data['products'] = $this->book_model->find($id);
-		$data['views'] = $this->book_model->get_views($id);
-				
+		$data['views'] = $this->book_model->get_views($id);			
+		$data['pbooks'] = $this->book_model->get_pbooks($id);			
 
 		$this->load->model('book_model');
 		$this->load->view('templates/header');
@@ -46,6 +45,9 @@ class Books extends CI_Controller {
 
 		$session_id = session_id();
 		$this->book_model->user_tracking($id, $session_id);
+
+		// print_r($data['pbooks']);
+
 
 	}
 
